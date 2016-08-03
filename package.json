@@ -1,0 +1,38 @@
+{
+  "name": "wrr-applystyle",
+  "description": "Helper for generator-wrr",
+  "version": "0.0.1",
+  "repository": "http://github.com/lexich/wrr-applystyle",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run eslint",
+    "eslint": "node_modules/.bin/eslint index.jsx",
+    "precommit": "npm test && npm build",
+    "prepush": "npm test && npm build",
+    "postmerge": "npm install",
+    "build": "node_modules/.bin/babel index.jsx -o index.js"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "dependencies": {
+    "react": "^15.3.0"
+  },
+  "devDependencies": {
+    "babel": "6.5.2",
+    "babel-cli": "6.11.4",
+    "babel-core": "6.11.4",
+    "babel-eslint": "6.1.2",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-stage-0": "6.5.0",
+    "eslint": "3.2.2",
+    "eslint-config-airbnb": "10.0.0",
+    "eslint-plugin-react": "6.0.0",
+    "eslint-plugin-import": "1.12.0",
+    "eslint-plugin-jsx-a11y": "2.0.1",
+    "husky": "0.11.6"
+  }
+}
