@@ -1,7 +1,7 @@
 {
   "name": "wrr-applystyle",
   "description": "Helper for generator-wrr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "http://github.com/lexich/wrr-applystyle",
   "main": "index.js",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "precommit": "npm test && npm build",
     "prepush": "npm test && npm build",
     "postmerge": "npm install",
-    "build": "node_modules/.bin/babel index.jsx -o index.js"
+    "build": "node_modules/.bin/babel index.jsx -o index.js --source-maps"
   },
   "engines": {
     "node": ">=0.4.0"
